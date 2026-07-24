@@ -1,0 +1,265 @@
+# =============================================================================
+# TheLinuxBook — MkDocs Configuration
+# Site  : https://Pruthviraj-333.github.io/TheLinuxBook/
+# Repo  : https://github.com/Pruthviraj-333/TheLinuxBook
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Site Metadata
+# ---------------------------------------------------------------------------
+site_name: "TheLinuxBook"
+site_description: "A comprehensive, production-quality Linux documentation reference — from fundamentals to kernel internals."
+site_author: "Pruthviraj"
+site_url: "https://Pruthviraj-333.github.io/TheLinuxBook/"
+
+repo_name: "Pruthviraj-333/TheLinuxBook"
+repo_url: "https://github.com/Pruthviraj-333/TheLinuxBook"
+edit_uri: "edit/main/docs/"
+
+copyright: "© Pruthviraj — Built with MkDocs & Material"
+
+# ---------------------------------------------------------------------------
+# Docs & Overrides
+# ---------------------------------------------------------------------------
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  custom_dir: overrides
+
+  # ── Branding ──────────────────────────────────────────────────────────────
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
+
+  # ── Fonts ─────────────────────────────────────────────────────────────────
+  font:
+    text: "Inter"          # Body text
+    code: "JetBrains Mono" # All code blocks
+
+  # ── Icon Set ──────────────────────────────────────────────────────────────
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+  # ── Palette (Light + Dark with system preference) ─────────────────────────
+  palette:
+    # Automatic: respect OS preference
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: "Switch to dark mode"
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: "Switch to light mode"
+
+  # ── Feature Flags ─────────────────────────────────────────────────────────
+  features:
+    # Navigation
+    - navigation.tabs             # Top-level section tabs
+    - navigation.tabs.sticky      # Tabs stay visible on scroll
+    - navigation.sections         # Collapsible sidebar sections
+    - navigation.expand           # Auto-expand current section
+    - navigation.indexes          # Section index pages
+    - navigation.top              # Back-to-top button (native)
+    - navigation.tracking         # Update URL on scroll
+    - navigation.footer           # Previous / Next page links
+
+    # Search
+    - search.suggest              # Autocomplete suggestions
+    - search.highlight            # Highlight matches on page
+    - search.share                # Share search URL
+
+    # Table of Contents
+    - toc.follow                  # Auto-scroll TOC on page
+
+    # Content
+    - content.code.copy           # Copy button on all code blocks
+    - content.code.annotate       # Inline code annotations
+    - content.tabs.link           # Sync tab selection across page
+    - content.tooltips            # Tooltip on abbreviations
+
+    # Header
+    - header.autohide             # Hide header on scroll down
+
+# ---------------------------------------------------------------------------
+# Markdown Extensions
+# ---------------------------------------------------------------------------
+markdown_extensions:
+
+  # Standard
+  - abbr                         # Abbreviations with tooltips
+  - admonition                   # Note / Warning / Tip / etc.
+  - attr_list                    # HTML attributes on elements
+  - def_list                     # Definition lists
+  - footnotes                    # [^1] footnotes
+  - md_in_html                   # Markdown inside HTML blocks
+  - tables                       # GFM-style tables
+  - toc:
+      permalink: true            # § anchor links on headings
+      permalink_title: "Link to this section"
+      toc_depth: 3
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:         # LaTeX math formulas
+      generic: true
+  - pymdownx.betterem:           # Smarter emphasis
+      smart_enable: all
+  - pymdownx.caret              # Superscript ^^text^^
+  - pymdownx.critic             # Track changes markup
+  - pymdownx.details            # <details> collapsible blocks
+  - pymdownx.emoji:             # :emoji: shortcodes
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite       # `#!python inline code`
+  - pymdownx.keys               # ++ctrl+c++ key rendering
+  - pymdownx.magiclink:         # Auto-link URLs & GitHub refs
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: Pruthviraj-333
+      repo: TheLinuxBook
+  - pymdownx.mark               # ==highlighted text==
+  - pymdownx.smartsymbols       # (tm) → ™
+  - pymdownx.snippets:          # --8<-- file includes
+      check_paths: true
+  - pymdownx.superfences:       # Fenced code + Mermaid
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:            # === "Tab" content tabs
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:          # - [x] task lists
+      custom_checkbox: true
+  - pymdownx.tilde              # ~~strikethrough~~
+
+# ---------------------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------------------
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang: en
+
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_git_follow: false
+      type: timeago
+      fallback_to_build_date: true
+
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+
+# ---------------------------------------------------------------------------
+# Extra Assets
+# ---------------------------------------------------------------------------
+extra_css:
+  - assets/css/custom.css
+  - assets/css/terminal.css
+
+extra_javascript:
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/js/custom.js
+  - assets/js/components.js
+
+# ---------------------------------------------------------------------------
+# Extra / Social
+# ---------------------------------------------------------------------------
+extra:
+  generator: false              # Remove "Made with Material" footer link
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Pruthviraj-333
+      name: "GitHub"
+  # analytics:
+  #   provider: google
+  #   property: !ENV [GOOGLE_ANALYTICS_KEY, ""]  # Uncomment and set secret to enable
+
+# ---------------------------------------------------------------------------
+# Navigation
+# ---------------------------------------------------------------------------
+nav:
+  - Home: index.md
+
+  - Fundamentals:
+    - fundamentals/index.md
+    - Commands:
+      - fundamentals/commands/index.md
+      - ls — List Directory Contents: fundamentals/commands/ls.md
+    - Filesystem:
+      - fundamentals/filesystem/index.md
+    - Kernel:
+      - fundamentals/kernel/index.md
+
+  - Shell & Scripting:
+    - shell/bash/index.md
+
+  - Process Management:
+    - process/index.md
+
+  - Memory Management:
+    - memory/index.md
+
+  - Networking:
+    - networking/index.md
+
+  - Storage:
+    - storage/index.md
+
+  - Security:
+    - security/index.md
+
+  - Containers:
+    - containers/index.md
+
+  - systemd:
+    - systemd/index.md
+
+  - Performance:
+    - performance/index.md
+
+  - Troubleshooting:
+    - troubleshooting/index.md
+
+  - Interview Prep:
+    - interview/index.md
+
+  - Labs:
+    - labs/index.md
+
+  - Examples & Showcases:
+    - Markdown Features: examples/markdown-showcase.md
+    - Interactive Components: examples/components-showcase.md
+
+  - Templates:
+    - Page Template: _templates/page-template.md
+    - Command Page Template: _templates/command-page-template.md
+    - Lab Template: _templates/lab-template.md

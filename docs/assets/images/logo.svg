@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#0077b6"/>
+  <!-- Stylized penguin / Linux mascot shape -->
+  <!-- Body -->
+  <ellipse cx="16" cy="19" rx="6" ry="7" fill="#ffffff"/>
+  <!-- Head -->
+  <ellipse cx="16" cy="10" rx="5" ry="5" fill="#0a0e1a"/>
+  <!-- Eyes -->
+  <circle cx="14" cy="9" r="1.2" fill="#ffffff"/>
+  <circle cx="18" cy="9" r="1.2" fill="#ffffff"/>
+  <circle cx="14.3" cy="9" r="0.6" fill="#0a0e1a"/>
+  <circle cx="18.3" cy="9" r="0.6" fill="#0a0e1a"/>
+  <!-- Beak -->
+  <ellipse cx="16" cy="12.5" rx="1.5" ry="1" fill="#ffd166"/>
+  <!-- Belly -->
+  <ellipse cx="16" cy="19.5" rx="3.5" ry="5" fill="#00b4d8" opacity="0.3"/>
+  <!-- Feet -->
+  <ellipse cx="13" cy="26" rx="2" ry="1" fill="#ffd166"/>
+  <ellipse cx="19" cy="26" rx="2" ry="1" fill="#ffd166"/>
+  <!-- Wings -->
+  <ellipse cx="10.5" cy="19" rx="2" ry="4" fill="#0a0e1a" transform="rotate(-15 10.5 19)"/>
+  <ellipse cx="21.5" cy="19" rx="2" ry="4" fill="#0a0e1a" transform="rotate(15 21.5 19)"/>
+</svg>

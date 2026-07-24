@@ -1,0 +1,21 @@
+# TheLinuxBook — Python Dependencies
+# Pin versions for reproducibility across machines and CI/CD
+
+# Core
+mkdocs>=1.6.0,<2.0.0
+mkdocs-material>=9.5.0,<10.0.0
+
+# Markdown Extensions (ships with Material but pinned separately)
+pymdown-extensions>=10.7.0
+
+# Syntax Highlighting
+Pygments>=2.18.0
+
+# Plugins
+mkdocs-minify-plugin>=0.8.0          # Minify HTML/CSS/JS output
+mkdocs-git-revision-date-localized-plugin>=1.2.0  # Show last updated date
+mkdocs-glightbox>=0.4.0              # Image lightbox / zoom
+
+# Optional: Social card generation (requires Cairo)
+# Pillow>=10.0.0
+# cairosvg>=2.0.0

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  {% if page and page.meta and page.meta.title %}
+    <title>{{ page.meta.title }} — TheLinuxBook</title>
+  {% elif page and page.title %}
+    <title>{{ page.title }} — TheLinuxBook</title>
+  {% else %}
+    <title>TheLinuxBook — Professional Linux Documentation</title>
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+  {% if page %}
+  {# ── Open Graph / Social Meta ────────────────────────────────────── #}
+  <meta property="og:type"        content="article">
+  <meta property="og:site_name"   content="TheLinuxBook">
+  <meta property="og:url"         content="{{ page.canonical_url }}">
+  <meta property="og:title"       content="{% if page.meta and page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }} — TheLinuxBook{% endif %}">
+  <meta property="og:description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}A professional Linux documentation reference — from fundamentals to kernel internals.{% endif %}">
+  <meta property="og:image"       content="{{ config.site_url }}assets/images/logo.svg">
+
+  {# ── Twitter Card ───────────────────────────────────────────────── #}
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="{% if page.meta and page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}Professional Linux documentation.{% endif %}">
+  <meta name="twitter:image"       content="{{ config.site_url }}assets/images/logo.svg">
+
+  {# ── Canonical URL ──────────────────────────────────────────────── #}
+  <link rel="canonical" href="{{ page.canonical_url }}">
+
+  {# ── Schema.org BreadcrumbList ──────────────────────────────────── #}
+  {% if page.ancestors %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ config.site_url }}"
+      }
+      {% for ancestor in page.ancestors %},
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index + 1 }},
+        "name": "{{ ancestor.title }}"
+      }
+      {% endfor %},
+      {
+        "@type": "ListItem",
+        "position": {{ page.ancestors|length + 2 }},
+        "name": "{{ page.title }}"
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+  {% endif %}
+{% endblock %}

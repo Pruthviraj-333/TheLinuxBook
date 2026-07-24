@@ -1,0 +1,151 @@
+/* =============================================================================
+   TheLinuxBook — Terminal Block Styles
+   Styles for shell/terminal command output blocks.
+   ============================================================================= */
+
+/* Terminal block — used with ```terminal or .terminal class */
+.md-typeset .highlight.terminal pre,
+.md-typeset .language-terminal pre,
+.md-typeset .language-console pre {
+  background: #0d1117 !important;
+  color: #c9d1d9 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 8px !important;
+  position: relative;
+}
+
+/* Terminal title bar */
+.md-typeset .highlight.terminal::before,
+.md-typeset .language-terminal::before {
+  content: "● ● ●";
+  display: block;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  color: #58a6ff;
+  border-radius: 8px 8px 0 0;
+  letter-spacing: 4px;
+}
+
+/* Prompt symbol styling — $, #, > characters at line start */
+.md-typeset .language-bash span.gp,
+.md-typeset .language-shell span.gp,
+.md-typeset .language-console span.gp {
+  color: #06d6a0 !important;
+  font-weight: 700;
+  user-select: none;
+}
+
+/* Command output text */
+.md-typeset .language-text pre {
+  background: #0d1117;
+  color: #8b949e;
+  border: 1px solid #21262d;
+  border-left: 3px solid #30363d;
+}
+
+/* Root prompt (#) — red/danger color */
+.md-typeset .language-bash code[class*="language-"]:has(span.gp:first-child) {
+  border-left: 3px solid #ff7b72;
+}
+
+/* ===========================================================================
+   Keyboard Shortcut Reference Table
+   =========================================================================== */
+.tlb-shortcut-table {
+  font-size: 0.875rem;
+}
+
+.tlb-shortcut-table td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* ===========================================================================
+   Command Reference Box
+   =========================================================================== */
+.tlb-command-box {
+  background: var(--tlb-bg-code);
+  border: 1px solid var(--tlb-border);
+  border-left: 4px solid var(--tlb-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.2rem;
+  font-family: var(--tlb-font-code);
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* ===========================================================================
+   Architecture Diagram Box
+   =========================================================================== */
+.tlb-arch-box {
+  background: linear-gradient(135deg, rgba(0,119,182,0.06), rgba(6,214,160,0.04));
+  border: 1px solid var(--tlb-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* ===========================================================================
+   File Tree
+   =========================================================================== */
+.tlb-file-tree {
+  font-family: var(--tlb-font-code);
+  font-size: 0.875rem;
+  background: var(--tlb-bg-secondary);
+  border: 1px solid var(--tlb-border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  line-height: 1.8;
+  overflow-x: auto;
+}
+
+.tlb-file-tree .dir  { color: var(--tlb-accent); font-weight: 700; }
+.tlb-file-tree .file { color: var(--tlb-text-muted); }
+.tlb-file-tree .exec { color: #06d6a0; }
+
+/* ===========================================================================
+   Collapsible Long Code Blocks
+   =========================================================================== */
+.tlb-collapsible-code {
+  position: relative;
+}
+
+.tlb-collapsible-code.collapsed pre {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.tlb-collapsible-code.collapsed::after {
+  content: "";
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(transparent, var(--tlb-bg-primary));
+  pointer-events: none;
+}
+
+.tlb-expand-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 6px;
+  background: var(--tlb-bg-secondary);
+  border: 1px solid var(--tlb-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.8rem;
+  color: var(--tlb-accent);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tlb-expand-btn:hover {
+  background: rgba(0, 180, 216, 0.08);
+}
