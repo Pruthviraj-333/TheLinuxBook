@@ -7,9 +7,9 @@
 .md-typeset .highlight.terminal pre,
 .md-typeset .language-terminal pre,
 .md-typeset .language-console pre {
-  background: #0d1117 !important;
-  color: #c9d1d9 !important;
-  border: 1px solid #30363d !important;
+  background: #16161e !important;
+  color: #c0caf5 !important;
+  border: 1px solid #24283b !important;
   border-radius: 8px !important;
   position: relative;
 }
@@ -19,11 +19,11 @@
 .md-typeset .language-terminal::before {
   content: "● ● ●";
   display: block;
-  background: #161b22;
-  border-bottom: 1px solid #30363d;
+  background: #1f2335;
+  border-bottom: 1px solid #24283b;
   padding: 6px 12px;
   font-size: 0.7rem;
-  color: #58a6ff;
+  color: #7aa2f7;
   border-radius: 8px 8px 0 0;
   letter-spacing: 4px;
 }
@@ -32,22 +32,22 @@
 .md-typeset .language-bash span.gp,
 .md-typeset .language-shell span.gp,
 .md-typeset .language-console span.gp {
-  color: #06d6a0 !important;
+  color: #9ece6a !important;
   font-weight: 700;
   user-select: none;
 }
 
 /* Command output text */
 .md-typeset .language-text pre {
-  background: #0d1117;
-  color: #8b949e;
-  border: 1px solid #21262d;
-  border-left: 3px solid #30363d;
+  background: #16161e;
+  color: #565f89;
+  border: 1px solid #24283b;
+  border-left: 3px solid #414868;
 }
 
 /* Root prompt (#) — red/danger color */
 .md-typeset .language-bash code[class*="language-"]:has(span.gp:first-child) {
-  border-left: 3px solid #ff7b72;
+  border-left: 3px solid #f7768e;
 }
 
 /* ===========================================================================
@@ -81,7 +81,7 @@
    Architecture Diagram Box
    =========================================================================== */
 .tlb-arch-box {
-  background: linear-gradient(135deg, rgba(0,119,182,0.06), rgba(6,214,160,0.04));
+  background: linear-gradient(135deg, rgba(122,162,247,0.06), rgba(158,206,106,0.04));
   border: 1px solid var(--tlb-border);
   border-radius: 12px;
   padding: 2rem;
@@ -105,7 +105,7 @@
 
 .tlb-file-tree .dir  { color: var(--tlb-accent); font-weight: 700; }
 .tlb-file-tree .file { color: var(--tlb-text-muted); }
-.tlb-file-tree .exec { color: #06d6a0; }
+.tlb-file-tree .exec { color: #9ece6a; }
 
 /* ===========================================================================
    Collapsible Long Code Blocks
@@ -147,5 +147,5 @@
 }
 
 .tlb-expand-btn:hover {
-  background: rgba(0, 180, 216, 0.08);
+  background: rgba(122, 162, 247, 0.08);
 }
