@@ -214,6 +214,11 @@ nav:
     - Commands:
       - fundamentals/commands/index.md
       - ls — List Directory Contents: fundamentals/commands/ls.md
+      - cd — Change Directory: fundamentals/commands/cd.md
+      - pwd — Print Working Directory: fundamentals/commands/pwd.md
+      - cp — Copy Files: fundamentals/commands/cp.md
+      - mv — Move / Rename: fundamentals/commands/mv.md
+      - rm — Remove Files: fundamentals/commands/rm.md
     - Filesystem:
       - fundamentals/filesystem/index.md
     - Kernel:

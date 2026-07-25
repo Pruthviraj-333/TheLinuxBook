@@ -14,11 +14,11 @@ description: Index of all Linux command reference pages — syntax, options, exa
 | Command | Description | Page |
 |---------|-------------|------|
 | `ls` | List directory contents | [→ ls](ls.md) |
-| `cd` | Change directory | Coming soon |
-| `pwd` | Print working directory | Coming soon |
-| `cp` | Copy files and directories | Coming soon |
-| `mv` | Move / rename files | Coming soon |
-| `rm` | Remove files and directories | Coming soon |
+| `cd` | Change directory | [→ cd](cd.md) |
+| `pwd` | Print working directory | [→ pwd](pwd.md) |
+| `cp` | Copy files and directories | [→ cp](cp.md) |
+| `mv` | Move / rename files | [→ mv](mv.md) |
+| `rm` | Remove files and directories | [→ rm](rm.md) |
 | `mkdir` | Create directories | Coming soon |
 | `rmdir` | Remove empty directories | Coming soon |
 | `touch` | Create empty file or update timestamps | Coming soon |
