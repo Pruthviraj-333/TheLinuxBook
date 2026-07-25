@@ -267,6 +267,8 @@
   overflow: hidden;
   box-shadow: var(--tlb-shadow-sm);
   transition: var(--tlb-transition);
+  padding: 1.25rem 1.5rem !important;
+  position: relative;
 }
 
 [data-md-color-scheme="slate"] .md-typeset pre {
