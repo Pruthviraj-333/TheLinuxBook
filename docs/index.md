@@ -13,11 +13,11 @@ hide:
     From shell basics to kernel internals — everything in one place.
   </p>
   <div class="tlb-badges">
-    <span class="tlb-badge tlb-badge--blue">📖 MkDocs + Material</span>
-    <span class="tlb-badge tlb-badge--green">🐧 Linux Fundamentals → Advanced</span>
-    <span class="tlb-badge tlb-badge--orange">🔬 Kernel Internals</span>
-    <span class="tlb-badge tlb-badge--blue">🧪 Hands-on Labs</span>
-    <span class="tlb-badge tlb-badge--green">💼 Interview Prep</span>
+    <span class="tlb-badge tlb-badge--blue">MkDocs + Material</span>
+    <span class="tlb-badge tlb-badge--green">Linux Fundamentals → Advanced</span>
+    <span class="tlb-badge tlb-badge--orange">Kernel Internals</span>
+    <span class="tlb-badge tlb-badge--blue">Hands-on Labs</span>
+    <span class="tlb-badge tlb-badge--green">Interview Prep</span>
   </div>
 </div>
 
@@ -25,62 +25,50 @@ hide:
 
 <div class="tlb-grid">
   <a class="tlb-card" href="fundamentals/">
-    <span class="tlb-card-icon">🔩</span>
     <span class="tlb-card-title">Fundamentals</span>
     <span class="tlb-card-desc">Core commands, filesystem hierarchy, kernel concepts, and system architecture.</span>
   </a>
   <a class="tlb-card" href="shell/bash/">
-    <span class="tlb-card-icon">🐚</span>
     <span class="tlb-card-title">Shell & Scripting</span>
     <span class="tlb-card-desc">Bash scripting, shell internals, job control, process substitution, and more.</span>
   </a>
   <a class="tlb-card" href="process/">
-    <span class="tlb-card-icon">⚙️</span>
     <span class="tlb-card-title">Process Management</span>
     <span class="tlb-card-desc">Process lifecycle, signals, scheduling, namespaces, and cgroups.</span>
   </a>
   <a class="tlb-card" href="memory/">
-    <span class="tlb-card-icon">🧠</span>
     <span class="tlb-card-title">Memory Management</span>
     <span class="tlb-card-desc">Virtual memory, paging, mmap, huge pages, OOM killer, and NUMA.</span>
   </a>
   <a class="tlb-card" href="networking/">
-    <span class="tlb-card-icon">🌐</span>
     <span class="tlb-card-title">Networking</span>
     <span class="tlb-card-desc">TCP/IP stack, sockets, iptables, network namespaces, and troubleshooting.</span>
   </a>
   <a class="tlb-card" href="storage/">
-    <span class="tlb-card-icon">💾</span>
     <span class="tlb-card-title">Storage</span>
     <span class="tlb-card-desc">Block devices, filesystems, LVM, RAID, I/O schedulers, and NFS.</span>
   </a>
   <a class="tlb-card" href="security/">
-    <span class="tlb-card-icon">🔐</span>
     <span class="tlb-card-title">Security</span>
     <span class="tlb-card-desc">Permissions, SELinux, AppArmor, capabilities, seccomp, and audit.</span>
   </a>
   <a class="tlb-card" href="containers/">
-    <span class="tlb-card-icon">📦</span>
     <span class="tlb-card-title">Containers</span>
     <span class="tlb-card-desc">namespaces, cgroups, OCI, container runtimes — how containers actually work.</span>
   </a>
   <a class="tlb-card" href="systemd/">
-    <span class="tlb-card-icon">1️⃣</span>
     <span class="tlb-card-title">systemd</span>
     <span class="tlb-card-desc">Unit files, targets, journald, socket activation, and service hardening.</span>
   </a>
   <a class="tlb-card" href="performance/">
-    <span class="tlb-card-icon">📈</span>
     <span class="tlb-card-title">Performance</span>
     <span class="tlb-card-desc">Profiling, perf, eBPF, flame graphs, CPU/memory/I/O tuning.</span>
   </a>
   <a class="tlb-card" href="troubleshooting/">
-    <span class="tlb-card-icon">🔍</span>
     <span class="tlb-card-title">Troubleshooting</span>
     <span class="tlb-card-desc">Systematic debugging methodology, kernel panic analysis, and war stories.</span>
   </a>
   <a class="tlb-card" href="interview/">
-    <span class="tlb-card-icon">💼</span>
     <span class="tlb-card-title">Interview Prep</span>
     <span class="tlb-card-desc">300+ curated Linux interview questions with detailed, expert answers.</span>
   </a>

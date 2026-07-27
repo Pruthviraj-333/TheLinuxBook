@@ -130,13 +130,13 @@ Deep dive into kernel-level behavior, data structures involved, etc.
 
 !!! danger "Anti-pattern"
     ```bash
-    # ❌ Don't do this
+    # Do NOT do this
     BAD_EXAMPLE
     ```
 
 !!! success "Correct approach"
     ```bash
-    # ✅ Do this instead
+    # Do this instead
     GOOD_EXAMPLE
     ```
 

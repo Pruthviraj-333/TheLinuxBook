@@ -292,10 +292,10 @@ Both will show the same inode number. The link count in `ls -l` output shows how
 
 !!! danger "Parsing `ls` output in scripts"
     ```bash
-    # ❌ Never do this — breaks with special characters in filenames
+    # Do NOT do this — breaks with special characters in filenames
     files=$(ls /path/to/dir)
 
-    # ✅ Use glob expansion or find
+    # Use glob expansion or find instead
     files=(/path/to/dir/*)
     ```
 

@@ -35,17 +35,14 @@ graph LR
 
 <div class="tlb-grid">
   <a class="tlb-card" href="commands/index.md">
-    <span class="tlb-card-icon">⌨️</span>
     <span class="tlb-card-title">Commands Reference</span>
     <span class="tlb-card-desc">Every essential Linux command with syntax, options, real examples, and kernel internals.</span>
   </a>
   <a class="tlb-card" href="filesystem/index.md">
-    <span class="tlb-card-icon">🗂️</span>
     <span class="tlb-card-title">Filesystem</span>
     <span class="tlb-card-desc">FHS directory structure, inodes, hard and soft links, VFS, and ext4 internals.</span>
   </a>
   <a class="tlb-card" href="kernel/index.md">
-    <span class="tlb-card-icon">🐧</span>
     <span class="tlb-card-title">Kernel Architecture</span>
     <span class="tlb-card-desc">Kernel subsystems, system calls, modules, /proc, /sys, and the boot process.</span>
   </a>
