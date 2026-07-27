@@ -5,13 +5,16 @@ description: "Complete reference for the cp command — syntax, all options, exa
 
 # `cp` — Copy Files and Directories
 
+!!! tip "Quick Start / TL;DR Cheat Sheet"
+    - **`cp file.txt backup.txt`** — Copy a single file
+    - **`cp -r folder/ backup_folder/`** — Copy an entire folder and all files inside it
+    - **`cp -i src.txt dst.txt`** — Safe copy: asks before overwriting an existing file
+    - **`cp -u src.txt dst.txt`** — Update: copies only if source file is newer than destination
+    - **`cp -v file.txt /tmp/`** — Verbose: shows files as they are being copied
+
 ## Overview
 
-`cp` copies files and directories. It reads the source file's data and metadata, then writes it to the destination. Understanding `cp`'s flags is essential for safe, efficient file operations.
-
-**Command type**: External (GNU coreutils)  
-**Location**: `/usr/bin/cp`  
-**Standard**: POSIX.1-2017
+The `cp` command is used to copy files or folders from one place to another.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: TheLinuxBook — Professional Linux Documentation
-description: A comprehensive, production-quality Linux documentation reference — from fundamentals to kernel internals, written for engineers who take Linux seriously.
+title: TheLinuxBook — Linux Made Simple
+description: A clear, easy-to-understand Linux reference guide — from basic commands to advanced concepts, written in plain English with practical examples.
 hide:
   - toc
   - navigation
@@ -9,145 +9,126 @@ hide:
 <div class="tlb-hero">
   <h1>TheLinuxBook</h1>
   <p>
-    A professional Linux documentation reference built for engineers.<br>
-    From shell basics to kernel internals — everything in one place.
+    Linux made clear, simple, and practical.<br>
+    Easy-to-follow command guides, step-by-step examples, and visual cheat sheets.
   </p>
   <div class="tlb-badges">
-    <span class="tlb-badge tlb-badge--blue">MkDocs + Material</span>
-    <span class="tlb-badge tlb-badge--green">Linux Fundamentals → Advanced</span>
-    <span class="tlb-badge tlb-badge--orange">Kernel Internals</span>
+    <span class="tlb-badge tlb-badge--green">Beginner Friendly</span>
+    <span class="tlb-badge tlb-badge--blue">Step-by-Step Examples</span>
+    <span class="tlb-badge tlb-badge--orange">Quick Cheat Sheets</span>
     <span class="tlb-badge tlb-badge--blue">Hands-on Labs</span>
-    <span class="tlb-badge tlb-badge--green">Interview Prep</span>
   </div>
 </div>
 
-## What's Inside
+## Quick Start Cheat Sheet
+
+Here are the most common daily Linux tasks and the exact commands to run:
+
+| Goal | Command | What It Does |
+|------|---------|--------------|
+| **List files** | `ls -l -h` | Show files in current folder with sizes |
+| **Show hidden files** | `ls -a` | List all files including hidden `.` files |
+| **Change folder** | `cd /path/to/folder` | Move to a different directory |
+| **Go back home** | `cd ~` or `cd` | Jump straight back to your home folder |
+| **Show current folder** | `pwd` | Print your current location path |
+| **Copy a file** | `cp file.txt backup.txt` | Create a copy of a file |
+| **Copy a folder** | `cp -r folder/ backup/` | Copy an entire folder and its contents |
+| **Move or rename** | `mv old.txt new.txt` | Rename a file or move it to another folder |
+| **Remove a file** | `rm file.txt` | Delete a file permanently |
+| **Remove a folder** | `rm -r folder/` | Delete a folder and everything inside it |
+
+---
+
+## Explore by Topic
 
 <div class="tlb-grid">
   <a class="tlb-card" href="fundamentals/">
     <span class="tlb-card-title">Fundamentals</span>
-    <span class="tlb-card-desc">Core commands, filesystem hierarchy, kernel concepts, and system architecture.</span>
+    <span class="tlb-card-desc">Basic concepts, folder structure, essential commands, and how Linux works.</span>
   </a>
   <a class="tlb-card" href="shell/bash/">
     <span class="tlb-card-title">Shell & Scripting</span>
-    <span class="tlb-card-desc">Bash scripting, shell internals, job control, process substitution, and more.</span>
+    <span class="tlb-card-desc">How to write scripts to automate repetitive tasks step by step.</span>
   </a>
   <a class="tlb-card" href="process/">
     <span class="tlb-card-title">Process Management</span>
-    <span class="tlb-card-desc">Process lifecycle, signals, scheduling, namespaces, and cgroups.</span>
+    <span class="tlb-card-desc">How to check running programs, stop frozen apps, and manage background tasks.</span>
   </a>
   <a class="tlb-card" href="memory/">
     <span class="tlb-card-title">Memory Management</span>
-    <span class="tlb-card-desc">Virtual memory, paging, mmap, huge pages, OOM killer, and NUMA.</span>
+    <span class="tlb-card-desc">Understand RAM, swap space, and how Linux manages memory.</span>
   </a>
   <a class="tlb-card" href="networking/">
     <span class="tlb-card-title">Networking</span>
-    <span class="tlb-card-desc">TCP/IP stack, sockets, iptables, network namespaces, and troubleshooting.</span>
+    <span class="tlb-card-desc">Check network status, test connections, download files, and troubleshoot.</span>
   </a>
   <a class="tlb-card" href="storage/">
     <span class="tlb-card-title">Storage</span>
-    <span class="tlb-card-desc">Block devices, filesystems, LVM, RAID, I/O schedulers, and NFS.</span>
+    <span class="tlb-card-desc">Disk space, mounting drives, formatting partitions, and file systems.</span>
   </a>
   <a class="tlb-card" href="security/">
     <span class="tlb-card-title">Security</span>
-    <span class="tlb-card-desc">Permissions, SELinux, AppArmor, capabilities, seccomp, and audit.</span>
+    <span class="tlb-card-desc">File permissions, user access control, and keeping your system safe.</span>
   </a>
   <a class="tlb-card" href="containers/">
     <span class="tlb-card-title">Containers</span>
-    <span class="tlb-card-desc">namespaces, cgroups, OCI, container runtimes — how containers actually work.</span>
+    <span class="tlb-card-desc">Learn how Docker and containers isolate applications in Linux.</span>
   </a>
   <a class="tlb-card" href="systemd/">
     <span class="tlb-card-title">systemd</span>
-    <span class="tlb-card-desc">Unit files, targets, journald, socket activation, and service hardening.</span>
+    <span class="tlb-card-desc">How Linux boots up, manages background services, and logs system events.</span>
   </a>
   <a class="tlb-card" href="performance/">
     <span class="tlb-card-title">Performance</span>
-    <span class="tlb-card-desc">Profiling, perf, eBPF, flame graphs, CPU/memory/I/O tuning.</span>
+    <span class="tlb-card-desc">Identify system slowdowns, monitor CPU usage, and speed up your machine.</span>
   </a>
   <a class="tlb-card" href="troubleshooting/">
     <span class="tlb-card-title">Troubleshooting</span>
-    <span class="tlb-card-desc">Systematic debugging methodology, kernel panic analysis, and war stories.</span>
+    <span class="tlb-card-desc">Step-by-step guides to diagnose and fix common Linux errors.</span>
   </a>
   <a class="tlb-card" href="interview/">
     <span class="tlb-card-title">Interview Prep</span>
-    <span class="tlb-card-desc">300+ curated Linux interview questions with detailed, expert answers.</span>
+    <span class="tlb-card-desc">Practice real-world Linux interview questions with clear explanations.</span>
   </a>
 </div>
 
 ---
 
-## Quick Navigation
+## Where Should I Start?
 
-=== "By Topic"
+=== "Beginner (New to Linux)"
 
-    | Area | Key Pages |
-    |---|---|
-    | **Commands** | [ls](fundamentals/commands/ls.md), chmod, chown, find, grep, awk, sed, ps, top |
-    | **Filesystem** | [Hierarchy](fundamentals/filesystem/index.md), inodes, hard vs soft links, mount |
-    | **Kernel** | [Architecture](fundamentals/kernel/index.md), syscalls, modules, procfs, sysfs |
-    | **Processes** | fork/exec, wait, signals, scheduler, namespaces |
-    | **Networking** | TCP/IP, sockets, iptables, ss, netstat, tcpdump |
-    | **Security** | DAC/MAC, capabilities, SELinux, seccomp, audit |
+    1. **[Essential Commands Reference](fundamentals/commands/index.md)** — Master `ls`, `cd`, `cp`, `mv`, `rm`.
+    2. **[Linux Fundamentals](fundamentals/index.md)** — Understand how files and folders are organized.
+    3. **[Filesystem Structure](fundamentals/filesystem/index.md)** — Learn what `/etc`, `/var`, `/home`, and `/usr` mean.
+    4. **[Bash Scripting Basics](shell/bash/index.md)** — Write your first script to automate tasks.
 
-=== "By Skill Level"
+=== "Intermediate (Daily User)"
 
-    **Beginner** — Start here:
+    1. **[Process Management](process/index.md)** — Learn `ps`, `top`, `kill`, and job control.
+    2. **[Memory Management](memory/index.md)** — Monitor RAM usage with `free -h` and `vmstat`.
+    3. **[Networking Guide](networking/index.md)** — Learn `ip`, `ping`, `curl`, `ss`, and `ssh`.
+    4. **[systemd Services](systemd/index.md)** — Create and manage background system services.
 
-    1. [Linux Fundamentals](fundamentals/index.md)
-    2. [Essential Commands](fundamentals/commands/index.md)
-    3. [Filesystem Hierarchy](fundamentals/filesystem/index.md)
-    4. [Bash Scripting](shell/bash/index.md)
+=== "Advanced (SysAdmin / DevOps)"
 
-    **Intermediate** — Level up:
-
-    5. [Process Management](process/index.md)
-    6. [Memory Management](memory/index.md)
-    7. [Networking Deep Dive](networking/index.md)
-    8. [systemd](systemd/index.md)
-
-    **Advanced** — Go deep:
-
-    9. [Kernel Internals](fundamentals/kernel/index.md)
-    10. [Performance Engineering](performance/index.md)
-    11. [Container Internals](containers/index.md)
-    12. [Security Hardening](security/index.md)
-
-=== "By Use Case"
-
-    - **SRE/DevOps**: Containers, systemd, Performance, Networking
-    - **Security Engineer**: Security, Kernel, Process Management
-    - **Developer**: System Calls, Memory, Filesystem, Debugging
-    - **Interview**: [Interview Prep](interview/index.md), [Labs](labs/index.md)
+    1. **[Kernel Architecture](fundamentals/kernel/index.md)** — Deep dive into system calls and `/proc`.
+    2. **[Performance Tuning](performance/index.md)** — Monitor CPU, I/O bottlenecks with `perf` and `eBPF`.
+    3. **[Containers Under the Hood](containers/index.md)** — How namespaces and cgroups build Docker containers.
+    4. **[Security & Hardening](security/index.md)** — Fine-tune permissions, SELinux, and capabilities.
 
 ---
 
-## How to Use This Book
-
-!!! tip "Markdown is the source of truth"
-    Every page is a `.md` file in `docs/`. Edit in any text editor.
-    Run `mkdocs serve` to preview locally with hot-reload.
-
-!!! info "Templates available"
-    Use the [page template](\_templates/page-template.md) for new topic pages
-    and the [command template](\_templates/command-page-template.md) for command references.
-
-!!! note "Keyboard shortcuts"
-    - ++slash++ or ++"?"++ → Search
-    - ++g++ ++h++ → Go home
-    - ++g++ ++t++ → Scroll to top
-
----
-
-## Architecture Overview
+## Simple Visual Workflow
 
 ```mermaid
-graph TD
-    A[Markdown Source<br/>docs/*.md] -->|mkdocs build| B[Static HTML<br/>site/]
-    B -->|GitHub Actions| C[gh-pages branch]
-    C --> D[GitHub Pages<br/>yourusername.github.io/TheLinuxBook]
+graph LR
+    A[Read Simple Guide] --> B[Try Command in Terminal]
+    B --> C[Check Output & Examples]
+    C --> D[Master Linux Concepts]
 
-    style A fill:#0077b6,color:#fff,stroke:#023e8a
-    style B fill:#06d6a0,color:#0d1117,stroke:#04a57a
-    style C fill:#9d4edd,color:#fff,stroke:#7b2fbe
-    style D fill:#f4a261,color:#0d1117,stroke:#c77b3c
+    style A fill:#7aa2f7,color:#fff
+    style B fill:#9ece6a,color:#1a1b26
+    style C fill:#bb9af7,color:#fff
+    style D fill:#7dcfff,color:#1a1b26
 ```

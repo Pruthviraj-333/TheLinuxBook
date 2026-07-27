@@ -5,13 +5,16 @@ description: "Complete reference for the ls command — syntax, all options, exa
 
 # `ls` — List Directory Contents
 
+!!! tip "Quick Start / TL;DR Cheat Sheet"
+    - **`ls`** — Show files in current folder
+    - **`ls -l -h`** — Detailed list with human-readable file sizes (e.g. 5MB, 1.2GB)
+    - **`ls -a`** — Show all files including hidden files (files starting with `.`)
+    - **`ls -l -t`** — Sort files by modified date (newest files at the top)
+    - **`ls -l -S -h`** — Sort files by size (largest files at the top)
+
 ## Overview
 
-`ls` lists files and directories in the filesystem. It is one of the most frequently used Linux commands and the starting point for understanding the filesystem. Despite its simplicity, `ls` has dozens of options that reveal metadata hidden by default.
-
-**Command type**: External (GNU coreutils)  
-**Location**: `/usr/bin/ls`  
-**Standard**: POSIX.1-2017
+The `ls` command is used to list files and folders. Think of it as opening a folder in File Explorer or Finder, but in your terminal.
 
 ---
 

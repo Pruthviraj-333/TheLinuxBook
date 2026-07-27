@@ -5,13 +5,15 @@ description: "Complete reference for the mv command — syntax, options, example
 
 # `mv` — Move / Rename Files
 
+!!! tip "Quick Start / TL;DR Cheat Sheet"
+    - **`mv old.txt new.txt`** — Rename a file or folder
+    - **`mv file.txt /tmp/`** — Move a file into another folder
+    - **`mv -i src.txt dst.txt`** — Safe move: prompts before overwriting any file
+    - **`mv *.log /var/archive/`** — Move multiple files at once
+
 ## Overview
 
-`mv` moves or renames files and directories. On the **same filesystem**, it is instantaneous — it simply updates the directory entry. Across filesystems, it copies the data then removes the source.
-
-**Command type**: External (GNU coreutils)  
-**Location**: `/usr/bin/mv`  
-**Standard**: POSIX.1-2017
+The `mv` (Move) command is used to move files to a different folder or rename them.
 
 ---
 

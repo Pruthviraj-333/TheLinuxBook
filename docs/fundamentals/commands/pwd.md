@@ -5,13 +5,13 @@ description: "Complete reference for the pwd command — syntax, options, exampl
 
 # `pwd` — Print Working Directory
 
+!!! tip "Quick Start / TL;DR Cheat Sheet"
+    - **`pwd`** — Shows the full path of the folder you are currently in (e.g. `/home/user/projects`)
+    - **`pwd -P`** — Shows the physical path (resolves shortcuts/symlinks)
+
 ## Overview
 
-`pwd` prints the **absolute path** of the current working directory. Every process has a CWD (Current Working Directory) tracked by the kernel.
-
-**Command type**: Shell builtin AND external (`/usr/bin/pwd`)  
-**Location**: `/usr/bin/pwd`  
-**Standard**: POSIX.1-2017
+`pwd` stands for **Print Working Directory**. It answers the simple question: *"Where am I right now in the filesystem?"*
 
 ---
 

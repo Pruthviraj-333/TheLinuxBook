@@ -5,13 +5,16 @@ description: "Complete reference for the rm command — syntax, options, example
 
 # `rm` — Remove Files and Directories
 
+!!! tip "Quick Start / TL;DR Cheat Sheet"
+    - **`rm file.txt`** — Permanently delete a file
+    - **`rm -i file.txt`** — Safe delete: asks for confirmation before deleting
+    - **`rm -r folder/`** — Delete a folder and all files inside it
+    - **`rm -f file.txt`** — Force delete (no warning if file doesn't exist)
+    - **`rm -rf folder/`** — Force delete a folder and all contents (Use with care!)
+
 ## Overview
 
-`rm` removes files and directories by **unlinking** them from the filesystem. It does not wipe data from disk by default — it only removes directory entries and decrements inode link counts.
-
-**Command type**: External (GNU coreutils)  
-**Location**: `/usr/bin/rm`  
-**Standard**: POSIX.1-2017
+The `rm` (Remove) command is used to delete files and folders permanently. Unlike Windows or macOS, Linux does **not** move deleted files to a Trash bin by default.
 
 ---
 

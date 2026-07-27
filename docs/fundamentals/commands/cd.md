@@ -5,12 +5,16 @@ description: "Complete reference for the cd command — syntax, options, special
 
 # `cd` — Change Directory
 
+!!! tip "Quick Start / TL;DR Cheat Sheet"
+    - **`cd`** or **`cd ~`** — Jump straight to your Home folder
+    - **`cd ..`** — Move up 1 folder level (parent folder)
+    - **`cd ../..`** — Move up 2 folder levels
+    - **`cd -`** — Switch back to the previous folder you were in
+    - **`cd /path/to/folder`** — Jump directly to a specific folder path
+
 ## Overview
 
-`cd` changes the shell's current working directory. It is a **shell builtin** — not an external binary — meaning it modifies the shell process's own state directly.
-
-**Command type**: Shell builtin  
-**Standard**: POSIX.1-2017
+The `cd` (Change Directory) command is used to move around folders in Linux. Think of it like double-clicking folders to open them in a file manager.
 
 ---
 

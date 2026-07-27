@@ -1,137 +1,97 @@
 ---
-title: Commands Reference
-description: Index of all Linux command reference pages — syntax, options, examples, and internals.
+title: Essential Linux Commands Reference
+description: Quick start cheat sheet and simple reference for all core Linux commands.
 ---
 
-# Commands Reference
+# Essential Linux Commands Reference
 
-> Each command page follows a consistent structure: description → syntax → options → examples → internals → performance → interview questions.
-
-## Essential Commands
-
-### File & Directory Operations
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `ls` | List directory contents | [→ ls](ls.md) |
-| `cd` | Change directory | [→ cd](cd.md) |
-| `pwd` | Print working directory | [→ pwd](pwd.md) |
-| `cp` | Copy files and directories | [→ cp](cp.md) |
-| `mv` | Move / rename files | [→ mv](mv.md) |
-| `rm` | Remove files and directories | [→ rm](rm.md) |
-| `mkdir` | Create directories | Coming soon |
-| `rmdir` | Remove empty directories | Coming soon |
-| `touch` | Create empty file or update timestamps | Coming soon |
-| `ln` | Create hard and symbolic links | Coming soon |
-
-### File Viewing & Editing
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `cat` | Concatenate and display files | Coming soon |
-| `less` | Page through file content | Coming soon |
-| `head` | View first N lines | Coming soon |
-| `tail` | View last N lines (+ follow) | Coming soon |
-| `wc` | Word, line, character count | Coming soon |
-| `diff` | Compare files line by line | Coming soon |
-| `sort` | Sort lines of text | Coming soon |
-| `uniq` | Report or filter duplicate lines | Coming soon |
-
-### Search & Pattern Matching
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `find` | Search files by name/type/time/size | Coming soon |
-| `grep` | Search file contents with regex | Coming soon |
-| `awk` | Pattern scanning and processing | Coming soon |
-| `sed` | Stream editor for text transformation | Coming soon |
-| `xargs` | Build and execute commands from stdin | Coming soon |
-| `locate` | Fast filename database search | Coming soon |
-
-### Process Management
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `ps` | Report process status | Coming soon |
-| `top` | Dynamic real-time process viewer | Coming soon |
-| `htop` | Interactive process viewer | Coming soon |
-| `kill` | Send signal to a process | Coming soon |
-| `killall` | Kill processes by name | Coming soon |
-| `nice` | Run command with modified priority | Coming soon |
-| `renice` | Alter priority of running process | Coming soon |
-| `nohup` | Run command immune to hangups | Coming soon |
-| `jobs` | List active shell jobs | Coming soon |
-| `fg` / `bg` | Bring job to foreground/background | Coming soon |
-
-### Networking
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `ip` | Show/manipulate network interfaces | Coming soon |
-| `ss` | Socket statistics (netstat replacement) | Coming soon |
-| `ping` | Test network connectivity | Coming soon |
-| `curl` | HTTP/HTTPS client | Coming soon |
-| `wget` | File downloader | Coming soon |
-| `ssh` | Secure Shell client | Coming soon |
-| `scp` | Secure copy over SSH | Coming soon |
-| `rsync` | Efficient file synchronization | Coming soon |
-| `netstat` | Network statistics (legacy) | Coming soon |
-| `tcpdump` | Capture and analyze network packets | Coming soon |
-
-### Disk & Filesystem
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `df` | Disk filesystem usage | Coming soon |
-| `du` | Directory disk usage | Coming soon |
-| `mount` | Mount filesystems | Coming soon |
-| `umount` | Unmount filesystems | Coming soon |
-| `fdisk` | Partition table manipulator | Coming soon |
-| `lsblk` | List block devices | Coming soon |
-| `blkid` | Block device attributes | Coming soon |
-| `mkfs` | Create a filesystem | Coming soon |
-| `fsck` | Filesystem check and repair | Coming soon |
-
-### System Information
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `uname` | System information | Coming soon |
-| `hostname` | Show/set system hostname | Coming soon |
-| `uptime` | System uptime and load average | Coming soon |
-| `free` | Memory usage | Coming soon |
-| `lscpu` | CPU information | Coming soon |
-| `lsmem` | Memory range information | Coming soon |
-| `lspci` | PCI device list | Coming soon |
-| `lsusb` | USB device list | Coming soon |
-| `dmesg` | Kernel ring buffer messages | Coming soon |
-
-### Permissions & Ownership
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `chmod` | Change file permissions | Coming soon |
-| `chown` | Change file owner and group | Coming soon |
-| `chgrp` | Change group ownership | Coming soon |
-| `umask` | Set default permission mask | Coming soon |
-| `getfacl` | Get file ACL | Coming soon |
-| `setfacl` | Set file ACL | Coming soon |
-
-### Text Processing
-
-| Command | Description | Page |
-|---------|-------------|------|
-| `cut` | Remove sections from lines | Coming soon |
-| `tr` | Translate or delete characters | Coming soon |
-| `paste` | Merge lines of files | Coming soon |
-| `tee` | Read stdin, write to stdout and files | Coming soon |
-| `column` | Columnate lists | Coming soon |
-| `jq` | JSON processor | Coming soon |
+> Simple, easy-to-understand reference for Linux terminal commands. Every command page includes a **TL;DR Quick Start**, **Step-by-Step Examples**, and **Cheat Sheets**.
 
 ---
 
-!!! tip "How to add a new command page"
-    1. Copy `_templates/command-page-template.md`
-    2. Save as `docs/fundamentals/commands/COMMAND.md`
-    3. Add an entry to the `nav:` section in `mkdocs.yml`
-    4. Fill in every section of the template
+## TL;DR — 10 Most Useful Commands
+
+If you only learn 10 commands today, start with these:
+
+| Command | Quick Explanation | Example Usage | Detailed Guide |
+|---------|-------------------|---------------|----------------|
+| **`ls`** | See files in your folder | `ls -lh` | [View Guide →](ls.md) |
+| **`cd`** | Move into another folder | `cd /var/log` | [View Guide →](cd.md) |
+| **`pwd`** | Show your current folder path | `pwd` | [View Guide →](pwd.md) |
+| **`cp`** | Copy a file or folder | `cp -r src/ dst/` | [View Guide →](cp.md) |
+| **`mv`** | Move or rename a file | `mv old.txt new.txt` | [View Guide →](mv.md) |
+| **`rm`** | Delete a file or folder | `rm -i file.txt` | [View Guide →](rm.md) |
+| **`cat`** | Print file content on screen | `cat /etc/os-release` | Coming soon |
+| **`grep`** | Search text inside files | `grep "error" app.log` | Coming soon |
+| **`ps`** | See running programs | `ps aux` | Coming soon |
+| **`free`** | Check available memory (RAM) | `free -h` | Coming soon |
+
+---
+
+## All Commands Categorized
+
+### 📁 File & Directory Operations
+
+| Command | Simple Explanation | Full Guide |
+|---------|--------------------|------------|
+| `ls` | List files and folders in a directory | [Full Guide →](ls.md) |
+| `cd` | Change current working directory | [Full Guide →](cd.md) |
+| `pwd` | Print your current location path | [Full Guide →](pwd.md) |
+| `cp` | Make a copy of files or directories | [Full Guide →](cp.md) |
+| `mv` | Move files to another folder or rename them | [Full Guide →](mv.md) |
+| `rm` | Remove/delete files or directories | [Full Guide →](rm.md) |
+| `mkdir` | Create a new empty folder | Coming soon |
+| `rmdir` | Delete an empty folder | Coming soon |
+| `touch` | Create an empty file instantly | Coming soon |
+| `ln` | Create shortcuts (symbolic or hard links) | Coming soon |
+
+---
+
+### 📄 File Viewing & Editing
+
+| Command | Simple Explanation | Full Guide |
+|---------|--------------------|------------|
+| `cat` | View whole file content in terminal | Coming soon |
+| `less` | View long files page by page | Coming soon |
+| `head` | Show first 10 lines of a file | Coming soon |
+| `tail` | Show last 10 lines (great for log tracking) | Coming soon |
+| `wc` | Count words, lines, and characters | Coming soon |
+| `diff` | Compare two files side by side | Coming soon |
+| `sort` | Sort text lines alphabetically or numerically | Coming soon |
+| `uniq` | Find and remove duplicate lines | Coming soon |
+
+---
+
+### 🔍 Searching & Filtering
+
+| Command | Simple Explanation | Full Guide |
+|---------|--------------------|------------|
+| `find` | Find files by name, size, or date | Coming soon |
+| `grep` | Search for specific words/patterns in text | Coming soon |
+| `awk` | Extract columns and process structured text | Coming soon |
+| `sed` | Find and replace text automatically | Coming soon |
+| `xargs` | Pass search results into another command | Coming soon |
+
+---
+
+### ⚙️ Process & System Control
+
+| Command | Simple Explanation | Full Guide |
+|---------|--------------------|------------|
+| `ps` | List active programs running on your system | Coming soon |
+| `top` | Live task manager showing CPU and RAM usage | Coming soon |
+| `htop` | Colorful, interactive process task manager | Coming soon |
+| `kill` | Stop a running program using its Process ID (PID) | Coming soon |
+| `killall` | Stop all instances of a program by name | Coming soon |
+
+---
+
+### 🌐 Networking & Downloads
+
+| Command | Simple Explanation | Full Guide |
+|---------|--------------------|------------|
+| `ping` | Test connection speed to a website or server | Coming soon |
+| `curl` | Download files or send web requests | Coming soon |
+| `wget` | Direct file downloader from the web | Coming soon |
+| `ssh` | Connect securely to a remote Linux server | Coming soon |
+| `ip` | Check your IP address and network interfaces | Coming soon |
