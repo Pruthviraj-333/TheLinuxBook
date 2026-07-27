@@ -219,6 +219,12 @@ nav:
       - cp — Copy Files: fundamentals/commands/cp.md
       - mv — Move / Rename: fundamentals/commands/mv.md
       - rm — Remove Files: fundamentals/commands/rm.md
+      - mkdir — Create Directories: fundamentals/commands/mkdir.md
+      - touch — Create / Update Files: fundamentals/commands/touch.md
+      - cat — Display Files: fundamentals/commands/cat.md
+      - grep — Search Text: fundamentals/commands/grep.md
+      - find — Search Files: fundamentals/commands/find.md
+      - ps — Process Status: fundamentals/commands/ps.md
     - Filesystem:
       - fundamentals/filesystem/index.md
     - Kernel:

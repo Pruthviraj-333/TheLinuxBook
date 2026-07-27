@@ -21,9 +21,9 @@ If you only learn 10 commands today, start with these:
 | **`cp`** | Copy a file or folder | `cp -r src/ dst/` | [View Guide →](cp.md) |
 | **`mv`** | Move or rename a file | `mv old.txt new.txt` | [View Guide →](mv.md) |
 | **`rm`** | Delete a file or folder | `rm -i file.txt` | [View Guide →](rm.md) |
-| **`cat`** | Print file content on screen | `cat /etc/os-release` | Coming soon |
-| **`grep`** | Search text inside files | `grep "error" app.log` | Coming soon |
-| **`ps`** | See running programs | `ps aux` | Coming soon |
+| **`cat`** | Print file content on screen | `cat /etc/os-release` | [View Guide →](cat.md) |
+| **`grep`** | Search text inside files | `grep "error" app.log` | [View Guide →](grep.md) |
+| **`ps`** | See running programs | `ps aux` | [View Guide →](ps.md) |
 | **`free`** | Check available memory (RAM) | `free -h` | Coming soon |
 
 ---
@@ -40,9 +40,9 @@ If you only learn 10 commands today, start with these:
 | `cp` | Make a copy of files or directories | [Full Guide →](cp.md) |
 | `mv` | Move files to another folder or rename them | [Full Guide →](mv.md) |
 | `rm` | Remove/delete files or directories | [Full Guide →](rm.md) |
-| `mkdir` | Create a new empty folder | Coming soon |
+| `mkdir` | Create a new empty folder | [Full Guide →](mkdir.md) |
 | `rmdir` | Delete an empty folder | Coming soon |
-| `touch` | Create an empty file instantly | Coming soon |
+| `touch` | Create an empty file instantly | [Full Guide →](touch.md) |
 | `ln` | Create shortcuts (symbolic or hard links) | Coming soon |
 
 ---
@@ -51,7 +51,7 @@ If you only learn 10 commands today, start with these:
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
-| `cat` | View whole file content in terminal | Coming soon |
+| `cat` | View whole file content in terminal | [Full Guide →](cat.md) |
 | `less` | View long files page by page | Coming soon |
 | `head` | Show first 10 lines of a file | Coming soon |
 | `tail` | Show last 10 lines (great for log tracking) | Coming soon |
@@ -66,8 +66,8 @@ If you only learn 10 commands today, start with these:
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
-| `find` | Find files by name, size, or date | Coming soon |
-| `grep` | Search for specific words/patterns in text | Coming soon |
+| `find` | Find files by name, size, or date | [Full Guide →](find.md) |
+| `grep` | Search for specific words/patterns in text | [Full Guide →](grep.md) |
 | `awk` | Extract columns and process structured text | Coming soon |
 | `sed` | Find and replace text automatically | Coming soon |
 | `xargs` | Pass search results into another command | Coming soon |
@@ -78,7 +78,7 @@ If you only learn 10 commands today, start with these:
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
-| `ps` | List active programs running on your system | Coming soon |
+| `ps` | List active programs running on your system | [Full Guide →](ps.md) |
 | `top` | Live task manager showing CPU and RAM usage | Coming soon |
 | `htop` | Colorful, interactive process task manager | Coming soon |
 | `kill` | Stop a running program using its Process ID (PID) | Coming soon |
