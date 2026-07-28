@@ -30,7 +30,7 @@ If you only learn 10 commands today, start with these:
 
 ## All Commands Categorized
 
-### File & Directory Operations
+### File, Permissions & Directory Operations
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
@@ -44,10 +44,13 @@ If you only learn 10 commands today, start with these:
 | `rmdir` | Delete an empty folder | [Full Guide →](rmdir.md) |
 | `touch` | Create an empty file instantly | [Full Guide →](touch.md) |
 | `ln` | Create shortcuts (symbolic or hard links) | [Full Guide →](ln.md) |
+| `chmod` | Change file permissions (read, write, execute) | [Full Guide →](chmod.md) |
+| `chown` | Change file owner and group | [Full Guide →](chown.md) |
+| `tar` | Archive and compress directories (.tar.gz) | [Full Guide →](tar.md) |
 
 ---
 
-### File Viewing & Editing
+### File Viewing, Disk Storage & Editing
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
@@ -59,6 +62,8 @@ If you only learn 10 commands today, start with these:
 | `diff` | Compare two files side by side | [Full Guide →](diff.md) |
 | `sort` | Sort text lines alphabetically or numerically | [Full Guide →](sort.md) |
 | `uniq` | Find and remove duplicate lines | [Full Guide →](uniq.md) |
+| `df` | Check filesystem disk space and inodes | [Full Guide →](df.md) |
+| `du` | Calculate directory sizes and find large files | [Full Guide →](du.md) |
 
 ---
 
@@ -74,7 +79,7 @@ If you only learn 10 commands today, start with these:
 
 ---
 
-### Process & System Control
+### Process, System & Service Control
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
@@ -83,10 +88,14 @@ If you only learn 10 commands today, start with these:
 | `htop` | Colorful, interactive process task manager | [Full Guide →](htop.md) |
 | `kill` | Stop a running program using its Process ID (PID) | [Full Guide →](kill.md) |
 | `killall` | Stop all instances of a program by name | [Full Guide →](killall.md) |
+| `free` | Check system memory (RAM) and swap usage | [Full Guide →](free.md) |
+| `systemctl` | Manage system services and background daemons | [Full Guide →](systemctl.md) |
+| `journalctl` | Query and filter systemd binary logs | [Full Guide →](journalctl.md) |
+| `sudo` | Execute commands with root privileges | [Full Guide →](sudo.md) |
 
 ---
 
-### Networking & Downloads
+### Networking, DNS & Diagnostics
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
@@ -95,3 +104,6 @@ If you only learn 10 commands today, start with these:
 | `wget` | Direct file downloader from the web | [Full Guide →](wget.md) |
 | `ssh` | Connect securely to a remote Linux server | [Full Guide →](ssh.md) |
 | `ip` | Check your IP address and network interfaces | [Full Guide →](ip.md) |
+| `ss` | Inspect listening TCP/UDP ports and sockets | [Full Guide →](ss.md) |
+| `dig` | Perform DNS record lookups and traces | [Full Guide →](dig.md) |
+| `tcpdump` | Capture and analyze network traffic packets | [Full Guide →](tcpdump.md) |
