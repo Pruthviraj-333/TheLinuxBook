@@ -37,6 +37,10 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/awk/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/cat/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
@@ -49,11 +53,51 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/curl/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/diff/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/find/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/free/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/grep/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/head/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/htop/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ip/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/kill/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/killall/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/less/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ln/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
@@ -69,6 +113,10 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ping/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ps/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
@@ -81,7 +129,47 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/rmdir/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/sed/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/sort/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ssh/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/tail/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/top/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/touch/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/uniq/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/wc/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/wget/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/xargs/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
