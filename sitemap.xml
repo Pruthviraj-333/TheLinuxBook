@@ -49,6 +49,14 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/chmod/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/chown/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/cp/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
@@ -57,7 +65,19 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/df/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/diff/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/dig/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/du/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
@@ -82,6 +102,10 @@
     </url>
     <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ip/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/journalctl/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
@@ -141,11 +165,31 @@
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ss/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/ssh/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/sudo/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/systemctl/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/tail/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/tar/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://Pruthviraj-333.github.io/TheLinuxBook/fundamentals/commands/tcpdump/</loc>
          <lastmod>2026-07-28</lastmod>
     </url>
     <url>
