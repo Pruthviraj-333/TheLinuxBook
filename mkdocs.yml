@@ -222,9 +222,15 @@ nav:
       - mkdir — Create Directories: fundamentals/commands/mkdir.md
       - touch — Create / Update Files: fundamentals/commands/touch.md
       - cat — Display Files: fundamentals/commands/cat.md
+      - head — First Lines: fundamentals/commands/head.md
+      - tail — Last Lines: fundamentals/commands/tail.md
       - grep — Search Text: fundamentals/commands/grep.md
       - find — Search Files: fundamentals/commands/find.md
+      - kill — Send Signals: fundamentals/commands/kill.md
       - ps — Process Status: fundamentals/commands/ps.md
+      - ping — Test Connectivity: fundamentals/commands/ping.md
+      - curl — Transfer Data: fundamentals/commands/curl.md
+      - ssh — Secure Shell: fundamentals/commands/ssh.md
     - Filesystem:
       - fundamentals/filesystem/index.md
     - Kernel:

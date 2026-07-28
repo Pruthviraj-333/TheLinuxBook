@@ -53,8 +53,8 @@ If you only learn 10 commands today, start with these:
 |---------|--------------------|------------|
 | `cat` | View whole file content in terminal | [Full Guide →](cat.md) |
 | `less` | View long files page by page | Coming soon |
-| `head` | Show first 10 lines of a file | Coming soon |
-| `tail` | Show last 10 lines (great for log tracking) | Coming soon |
+| `head` | Show first 10 lines of a file | [Full Guide →](head.md) |
+| `tail` | Show last 10 lines (great for log tracking) | [Full Guide →](tail.md) |
 | `wc` | Count words, lines, and characters | Coming soon |
 | `diff` | Compare two files side by side | Coming soon |
 | `sort` | Sort text lines alphabetically or numerically | Coming soon |
@@ -81,7 +81,7 @@ If you only learn 10 commands today, start with these:
 | `ps` | List active programs running on your system | [Full Guide →](ps.md) |
 | `top` | Live task manager showing CPU and RAM usage | Coming soon |
 | `htop` | Colorful, interactive process task manager | Coming soon |
-| `kill` | Stop a running program using its Process ID (PID) | Coming soon |
+| `kill` | Stop a running program using its Process ID (PID) | [Full Guide →](kill.md) |
 | `killall` | Stop all instances of a program by name | Coming soon |
 
 ---
@@ -90,8 +90,8 @@ If you only learn 10 commands today, start with these:
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
-| `ping` | Test connection speed to a website or server | Coming soon |
-| `curl` | Download files or send web requests | Coming soon |
+| `ping` | Test connection speed to a website or server | [Full Guide →](ping.md) |
+| `curl` | Download files or send web requests | [Full Guide →](curl.md) |
 | `wget` | Direct file downloader from the web | Coming soon |
-| `ssh` | Connect securely to a remote Linux server | Coming soon |
+| `ssh` | Connect securely to a remote Linux server | [Full Guide →](ssh.md) |
 | `ip` | Check your IP address and network interfaces | Coming soon |
