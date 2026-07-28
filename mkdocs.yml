@@ -220,17 +220,33 @@ nav:
       - mv — Move / Rename: fundamentals/commands/mv.md
       - rm — Remove Files: fundamentals/commands/rm.md
       - mkdir — Create Directories: fundamentals/commands/mkdir.md
+      - rmdir — Remove Empty Dirs: fundamentals/commands/rmdir.md
       - touch — Create / Update Files: fundamentals/commands/touch.md
+      - ln — Create Links: fundamentals/commands/ln.md
       - cat — Display Files: fundamentals/commands/cat.md
+      - less — Terminal Pager: fundamentals/commands/less.md
       - head — First Lines: fundamentals/commands/head.md
       - tail — Last Lines: fundamentals/commands/tail.md
+      - wc — Word / Line Count: fundamentals/commands/wc.md
+      - diff — Compare Files: fundamentals/commands/diff.md
+      - sort — Sort Lines: fundamentals/commands/sort.md
+      - uniq — Filter Duplicates: fundamentals/commands/uniq.md
       - grep — Search Text: fundamentals/commands/grep.md
       - find — Search Files: fundamentals/commands/find.md
+      - awk — Text Processing: fundamentals/commands/awk.md
+      - sed — Stream Editor: fundamentals/commands/sed.md
+      - xargs — Build Commands: fundamentals/commands/xargs.md
       - kill — Send Signals: fundamentals/commands/kill.md
+      - killall — Kill by Name: fundamentals/commands/killall.md
+      - top — Process Viewer: fundamentals/commands/top.md
+      - htop — Interactive Process Viewer: fundamentals/commands/htop.md
       - ps — Process Status: fundamentals/commands/ps.md
+      - free — Memory Usage: fundamentals/commands/free.md
       - ping — Test Connectivity: fundamentals/commands/ping.md
       - curl — Transfer Data: fundamentals/commands/curl.md
+      - wget — Download Files: fundamentals/commands/wget.md
       - ssh — Secure Shell: fundamentals/commands/ssh.md
+      - ip — Network Management: fundamentals/commands/ip.md
     - Filesystem:
       - fundamentals/filesystem/index.md
     - Kernel:

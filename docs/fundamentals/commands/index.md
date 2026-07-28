@@ -24,13 +24,13 @@ If you only learn 10 commands today, start with these:
 | **`cat`** | Print file content on screen | `cat /etc/os-release` | [View Guide →](cat.md) |
 | **`grep`** | Search text inside files | `grep "error" app.log` | [View Guide →](grep.md) |
 | **`ps`** | See running programs | `ps aux` | [View Guide →](ps.md) |
-| **`free`** | Check available memory (RAM) | `free -h` | Coming soon |
+| **`free`** | Check available memory (RAM) | `free -h` | [View Guide →](free.md) |
 
 ---
 
 ## All Commands Categorized
 
-### 📁 File & Directory Operations
+### File & Directory Operations
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
@@ -41,57 +41,57 @@ If you only learn 10 commands today, start with these:
 | `mv` | Move files to another folder or rename them | [Full Guide →](mv.md) |
 | `rm` | Remove/delete files or directories | [Full Guide →](rm.md) |
 | `mkdir` | Create a new empty folder | [Full Guide →](mkdir.md) |
-| `rmdir` | Delete an empty folder | Coming soon |
+| `rmdir` | Delete an empty folder | [Full Guide →](rmdir.md) |
 | `touch` | Create an empty file instantly | [Full Guide →](touch.md) |
-| `ln` | Create shortcuts (symbolic or hard links) | Coming soon |
+| `ln` | Create shortcuts (symbolic or hard links) | [Full Guide →](ln.md) |
 
 ---
 
-### 📄 File Viewing & Editing
+### File Viewing & Editing
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
 | `cat` | View whole file content in terminal | [Full Guide →](cat.md) |
-| `less` | View long files page by page | Coming soon |
+| `less` | View long files page by page | [Full Guide →](less.md) |
 | `head` | Show first 10 lines of a file | [Full Guide →](head.md) |
 | `tail` | Show last 10 lines (great for log tracking) | [Full Guide →](tail.md) |
-| `wc` | Count words, lines, and characters | Coming soon |
-| `diff` | Compare two files side by side | Coming soon |
-| `sort` | Sort text lines alphabetically or numerically | Coming soon |
-| `uniq` | Find and remove duplicate lines | Coming soon |
+| `wc` | Count words, lines, and characters | [Full Guide →](wc.md) |
+| `diff` | Compare two files side by side | [Full Guide →](diff.md) |
+| `sort` | Sort text lines alphabetically or numerically | [Full Guide →](sort.md) |
+| `uniq` | Find and remove duplicate lines | [Full Guide →](uniq.md) |
 
 ---
 
-### 🔍 Searching & Filtering
+### Searching & Filtering
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
 | `find` | Find files by name, size, or date | [Full Guide →](find.md) |
 | `grep` | Search for specific words/patterns in text | [Full Guide →](grep.md) |
-| `awk` | Extract columns and process structured text | Coming soon |
-| `sed` | Find and replace text automatically | Coming soon |
-| `xargs` | Pass search results into another command | Coming soon |
+| `awk` | Extract columns and process structured text | [Full Guide →](awk.md) |
+| `sed` | Find and replace text automatically | [Full Guide →](sed.md) |
+| `xargs` | Pass search results into another command | [Full Guide →](xargs.md) |
 
 ---
 
-### ⚙️ Process & System Control
+### Process & System Control
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
 | `ps` | List active programs running on your system | [Full Guide →](ps.md) |
-| `top` | Live task manager showing CPU and RAM usage | Coming soon |
-| `htop` | Colorful, interactive process task manager | Coming soon |
+| `top` | Live task manager showing CPU and RAM usage | [Full Guide →](top.md) |
+| `htop` | Colorful, interactive process task manager | [Full Guide →](htop.md) |
 | `kill` | Stop a running program using its Process ID (PID) | [Full Guide →](kill.md) |
-| `killall` | Stop all instances of a program by name | Coming soon |
+| `killall` | Stop all instances of a program by name | [Full Guide →](killall.md) |
 
 ---
 
-### 🌐 Networking & Downloads
+### Networking & Downloads
 
 | Command | Simple Explanation | Full Guide |
 |---------|--------------------|------------|
 | `ping` | Test connection speed to a website or server | [Full Guide →](ping.md) |
 | `curl` | Download files or send web requests | [Full Guide →](curl.md) |
-| `wget` | Direct file downloader from the web | Coming soon |
+| `wget` | Direct file downloader from the web | [Full Guide →](wget.md) |
 | `ssh` | Connect securely to a remote Linux server | [Full Guide →](ssh.md) |
-| `ip` | Check your IP address and network interfaces | Coming soon |
+| `ip` | Check your IP address and network interfaces | [Full Guide →](ip.md) |
