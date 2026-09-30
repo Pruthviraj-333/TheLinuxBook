@@ -188,7 +188,7 @@ extra_javascript:
   - assets/js/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - assets/js/custom.js
-  - assets/js/components.js
+  - assets/js/components.js?v=1
 
 # ---------------------------------------------------------------------------
 # Extra / Social

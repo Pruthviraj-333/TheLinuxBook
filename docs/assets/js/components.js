@@ -209,58 +209,196 @@ customElements.define('signal-table', SignalTable);
    ============================================================================= */
 class ProcessLifecycle extends HTMLElement {
   connectedCallback() {
+    const states = {
+      NEW: {
+        name: 'NEW',
+        linux: 'Kernel Allocation',
+        color: '#00b4d8',
+        desc: 'Process is being spawned via fork(), vfork(), or clone(). The kernel allocates a new PID, copies/shares the parent mm_struct (via Copy-On-Write), and sets up task_struct before admitting it to the ready queue.'
+      },
+      READY: {
+        name: 'READY',
+        linux: 'TASK_RUNNING (Runqueue)',
+        color: '#06d6a0',
+        desc: 'Process is loaded and runnable, residing in the CFS (Completely Fair Scheduler) runqueue. It is actively waiting for an available CPU core to be assigned by the scheduler.'
+      },
+      RUNNING: {
+        name: 'RUNNING',
+        linux: 'TASK_RUNNING (On CPU)',
+        color: '#ffd166',
+        desc: 'Process instructions are executing on an assigned CPU core. It runs until its time-slice expires (preempted), it calls a blocking syscall like read() (blocked), or calls exit().'
+      },
+      BLOCKED: {
+        name: 'BLOCKED / WAITING',
+        linux: 'TASK_INTERRUPTIBLE / TASK_UNINTERRUPTIBLE (D)',
+        color: '#f4a261',
+        desc: 'Process is removed from the runqueue and placed on a wait-queue waiting for an event (disk I/O, network packet, lock, or timer). Once ready, the kernel wakes it up and moves it back to READY.'
+      },
+      TERMINATED: {
+        name: 'TERMINATED',
+        linux: 'EXIT_ZOMBIE / EXIT_DEAD',
+        color: '#e63946',
+        desc: 'Process finished execution via exit() or an unhandled signal. Memory, file descriptors, and virtual address space are freed, but its exit status remains in the process table until the parent reaps it with wait().'
+      }
+    };
+
+    const id = Math.random().toString(36).slice(2, 7);
+
     this.innerHTML = `
-      <div style="border:1px solid var(--tlb-border,#30363d);border-radius:12px;overflow:hidden;max-width:600px;">
-        <div style="background:#0d1117;color:#fff;padding:.75rem 1.2rem;font-weight:700;font-size:.9rem;">
-          ⚙️ Process Lifecycle
+      <div style="border:1px solid var(--tlb-border,#30363d);border-radius:12px;overflow:hidden;max-width:640px;background:#0d1117;box-shadow:0 4px 20px rgba(0,0,0,0.25);">
+        <div style="background:#161b22;color:#e6edf3;padding:.75rem 1.2rem;font-weight:700;font-size:.9rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #21262d;">
+          <div style="display:flex;align-items:center;gap:.5rem;">
+            <span>⚙️</span>
+            <span>Process Lifecycle</span>
+          </div>
+          <span style="font-size:.72rem;color:#8b949e;font-weight:normal;">Click any state for kernel details</span>
         </div>
-        <div style="padding:1.5rem;text-align:center;overflow-x:auto;">
-          <svg viewBox="0 0 580 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+        <div style="padding:1.2rem 1rem .8rem;text-align:center;overflow-x:auto;">
+          <svg viewBox="0 0 620 270" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:inline-block;vertical-align:middle;user-select:none;">
             <defs>
-              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                <path d="M0,0 L10,5 L0,10 z" fill="#00b4d8"/>
+              <marker id="arrow-${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#00b4d8"/>
               </marker>
+              <marker id="arrow-preempt-${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ffd166"/>
+              </marker>
+              <marker id="arrow-exit-${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#e63946"/>
+              </marker>
+              <filter id="glow-${id}" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+              </filter>
             </defs>
-            <!-- States -->
-            <ellipse cx="60"  cy="130" rx="52" ry="28" fill="#1a2236" stroke="#0077b6" stroke-width="2"/>
-            <text x="60"  y="134" text-anchor="middle" font-size="12" fill="#00b4d8" font-weight="bold">NEW</text>
 
-            <ellipse cx="210" cy="60"  rx="52" ry="28" fill="#1a2236" stroke="#06d6a0" stroke-width="2"/>
-            <text x="210" y="64"  text-anchor="middle" font-size="12" fill="#06d6a0" font-weight="bold">READY</text>
+            <!-- Transition 1: NEW -> READY (fork) -->
+            <line x1="116" y1="120" x2="194" y2="72" stroke="#00b4d8" stroke-width="1.8" marker-end="url(#arrow-${id})"/>
+            <text x="144" y="88" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="600" fill="#cbd5e1" text-anchor="middle"
+              style="paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;">fork()</text>
 
-            <ellipse cx="350" cy="130" rx="52" ry="28" fill="#1a2236" stroke="#ffd166" stroke-width="2"/>
-            <text x="350" y="134" text-anchor="middle" font-size="12" fill="#ffd166" font-weight="bold">RUNNING</text>
+            <!-- Transition 2: READY -> RUNNING (schedule) - curved over top -->
+            <path d="M 288 56 Q 375 56 390 104" fill="none" stroke="#00b4d8" stroke-width="1.8" marker-end="url(#arrow-${id})"/>
+            <text x="345" y="47" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="600" fill="#cbd5e1" text-anchor="middle"
+              style="paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;">schedule</text>
 
-            <ellipse cx="210" cy="200" rx="52" ry="28" fill="#1a2236" stroke="#f4a261" stroke-width="2"/>
-            <text x="210" y="204" text-anchor="middle" font-size="12" fill="#f4a261" font-weight="bold">BLOCKED</text>
+            <!-- Transition 3: RUNNING -> READY (preempt) - dashed inner curve -->
+            <path d="M 352 118 Q 306 108 274 76" fill="none" stroke="#ffd166" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-preempt-${id})"/>
+            <text x="306" y="125" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="600" fill="#ffd166" text-anchor="middle"
+              style="paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;">preempt</text>
 
-            <ellipse cx="500" cy="130" rx="52" ry="28" fill="#1a2236" stroke="#e63946" stroke-width="2"/>
-            <text x="500" y="134" text-anchor="middle" font-size="12" fill="#e63946" font-weight="bold">TERMINATED</text>
+            <!-- Transition 4: RUNNING -> BLOCKED (I/O wait) -->
+            <line x1="352" y1="152" x2="286" y2="198" stroke="#00b4d8" stroke-width="1.8" marker-end="url(#arrow-${id})"/>
+            <text x="330" y="186" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="600" fill="#cbd5e1" text-anchor="middle"
+              style="paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;">I/O wait</text>
 
-            <!-- Transitions -->
-            <line x1="113" y1="108" x2="165" y2="78"  stroke="#00b4d8" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="122" y="88" font-size="9" fill="#8b949e">fork()</text>
+            <!-- Transition 5: BLOCKED -> READY (I/O done) - clean vertical line -->
+            <line x1="240" y1="188" x2="240" y2="82" stroke="#00b4d8" stroke-width="1.8" marker-end="url(#arrow-${id})"/>
+            <text x="230" y="135" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="600" fill="#cbd5e1" text-anchor="end"
+              style="paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;">I/O done</text>
 
-            <line x1="263" y1="78"  x2="305" y2="112" stroke="#00b4d8" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="272" y="88" font-size="9" fill="#8b949e">schedule</text>
+            <!-- Transition 6: RUNNING -> TERMINATED (exit) -->
+            <line x1="442" y1="135" x2="482" y2="135" stroke="#e63946" stroke-width="1.8" marker-end="url(#arrow-exit-${id})"/>
+            <text x="462" y="123" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="600" fill="#f87171" text-anchor="middle"
+              style="paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;">exit()</text>
 
-            <line x1="305" y1="148" x2="263" y2="182" stroke="#00b4d8" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="268" y="165" font-size="9" fill="#8b949e">I/O wait</text>
+            <!-- State Nodes -->
+            <!-- NEW -->
+            <g class="plc-node-${id}" data-state="NEW" style="cursor:pointer;" tabindex="0">
+              <ellipse cx="70" cy="135" rx="46" ry="25" fill="#111c2e" stroke="#0077b6" stroke-width="2" filter="url(#glow-${id})"/>
+              <text x="70" y="133" text-anchor="middle" font-size="12" fill="#00b4d8" font-weight="bold" font-family="system-ui,sans-serif">NEW</text>
+              <text x="70" y="146" text-anchor="middle" font-size="7.5" fill="#64748b" font-family="system-ui,sans-serif">created</text>
+            </g>
 
-            <line x1="165" y1="188" x2="207" y2="88"  stroke="#00b4d8" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="148" y="148" font-size="9" fill="#8b949e">I/O done</text>
+            <!-- READY -->
+            <g class="plc-node-${id}" data-state="READY" style="cursor:pointer;" tabindex="0">
+              <ellipse cx="240" cy="55" rx="48" ry="26" fill="#0d2822" stroke="#06d6a0" stroke-width="2" filter="url(#glow-${id})"/>
+              <text x="240" y="53" text-anchor="middle" font-size="12" fill="#06d6a0" font-weight="bold" font-family="system-ui,sans-serif">READY</text>
+              <text x="240" y="66" text-anchor="middle" font-size="7.5" fill="#6ee7b7" font-family="system-ui,sans-serif">runqueue</text>
+            </g>
 
-            <line x1="302" y1="118" x2="265" y2="74"  stroke="#00b4d8" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
-            <text x="286" y="90" font-size="9" fill="#8b949e">preempt</text>
+            <!-- RUNNING -->
+            <g class="plc-node-${id}" data-state="RUNNING" style="cursor:pointer;" tabindex="0">
+              <ellipse cx="390" cy="135" rx="52" ry="26" fill="#2d2412" stroke="#ffd166" stroke-width="2" filter="url(#glow-${id})"/>
+              <text x="390" y="133" text-anchor="middle" font-size="12" fill="#ffd166" font-weight="bold" font-family="system-ui,sans-serif">RUNNING</text>
+              <text x="390" y="146" text-anchor="middle" font-size="7.5" fill="#fde68a" font-family="system-ui,sans-serif">on CPU</text>
+            </g>
 
-            <line x1="403" y1="130" x2="448" y2="130" stroke="#00b4d8" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="415" y="124" font-size="9" fill="#8b949e">exit()</text>
+            <!-- BLOCKED -->
+            <g class="plc-node-${id}" data-state="BLOCKED" style="cursor:pointer;" tabindex="0">
+              <ellipse cx="240" cy="215" rx="50" ry="26" fill="#2b1b17" stroke="#f4a261" stroke-width="2" filter="url(#glow-${id})"/>
+              <text x="240" y="213" text-anchor="middle" font-size="12" fill="#f4a261" font-weight="bold" font-family="system-ui,sans-serif">BLOCKED</text>
+              <text x="240" y="226" text-anchor="middle" font-size="7.5" fill="#fdba74" font-family="system-ui,sans-serif">waiting I/O</text>
+            </g>
+
+            <!-- TERMINATED -->
+            <g class="plc-node-${id}" data-state="TERMINATED" style="cursor:pointer;" tabindex="0">
+              <ellipse cx="538" cy="135" rx="52" ry="26" fill="#2c161a" stroke="#e63946" stroke-width="2" filter="url(#glow-${id})"/>
+              <text x="538" y="133" text-anchor="middle" font-size="11.5" fill="#e63946" font-weight="bold" font-family="system-ui,sans-serif">TERMINATED</text>
+              <text x="538" y="146" text-anchor="middle" font-size="7.5" fill="#fca5a5" font-family="system-ui,sans-serif">zombie / dead</text>
+            </g>
           </svg>
         </div>
-        <div style="padding:.5rem 1.2rem 1rem;font-size:.78rem;color:#8b949e;line-height:1.6;">
-          Click any state in your notes to learn more. Solid arrows = normal flow. Dashed = preemption.
+
+        <!-- Interactive Info Box -->
+        <div id="plc-info-${id}" style="margin:0 1rem .8rem;padding:.75rem 1rem;background:#161b22;border:1px solid #21262d;border-radius:8px;text-align:left;transition:all 0.2s ease;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.3rem;">
+            <div id="plc-title-${id}" style="font-size:.85rem;font-weight:700;color:#06d6a0;display:flex;align-items:center;gap:.5rem;">
+              <span>READY</span>
+              <span id="plc-badge-${id}" style="font-size:.7rem;padding:.15rem .45rem;border-radius:4px;background:rgba(6,214,160,0.15);color:#06d6a0;font-weight:600;font-family:'JetBrains Mono',monospace;">TASK_RUNNING (Runqueue)</span>
+            </div>
+          </div>
+          <div id="plc-desc-${id}" style="font-size:.8rem;color:#c9d1d9;line-height:1.5;">
+            Process is loaded and runnable, residing in the CFS (Completely Fair Scheduler) runqueue. It is actively waiting for an available CPU core to be assigned.
+          </div>
+        </div>
+
+        <div style="padding:.4rem 1.2rem .8rem;font-size:.76rem;color:#8b949e;line-height:1.5;border-top:1px solid #161b22;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem;">
+          <span>Solid cyan = normal flow</span>
+          <span style="color:#ffd166;">Dashed yellow = preemption</span>
+          <span style="color:#f87171;">Red = process termination</span>
         </div>
       </div>`;
+
+    const infoBox = this.querySelector(`#plc-info-${id}`);
+    const titleEl = this.querySelector(`#plc-title-${id}`);
+    const badgeEl = this.querySelector(`#plc-badge-${id}`);
+    const descEl = this.querySelector(`#plc-desc-${id}`);
+    const nodes = this.querySelectorAll(`.plc-node-${id}`);
+
+    const selectState = (key) => {
+      const state = states[key];
+      if (!state) return;
+      titleEl.firstElementChild.textContent = state.name;
+      titleEl.style.color = state.color;
+      badgeEl.textContent = state.linux;
+      badgeEl.style.color = state.color;
+      badgeEl.style.background = `${state.color}22`;
+      descEl.textContent = state.desc;
+
+      nodes.forEach(node => {
+        const el = node.querySelector('ellipse');
+        if (node.dataset.state === key) {
+          el.setAttribute('stroke-width', '3.5');
+          node.style.transform = 'scale(1.04)';
+          node.style.transformOrigin = `${el.getAttribute('cx')}px ${el.getAttribute('cy')}px`;
+        } else {
+          el.setAttribute('stroke-width', '2');
+          node.style.transform = 'scale(1)';
+        }
+      });
+    };
+
+    nodes.forEach(node => {
+      node.style.transition = 'transform 0.15s ease';
+      node.addEventListener('click', () => selectState(node.dataset.state));
+      node.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          selectState(node.dataset.state);
+        }
+      });
+    });
+
+    selectState('READY');
   }
 }
 customElements.define('process-lifecycle', ProcessLifecycle);
